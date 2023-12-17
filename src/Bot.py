@@ -379,7 +379,6 @@ class Bot():
 
         log.debug(f"executed instruction:\n{instruction}")
 
-
     def abilityAvaliabe(self, last_used, cooldown):
         # TODO: Store if the game is speeded up or not. If it is use the constant (true by default)
         m = 1
@@ -389,6 +388,15 @@ class Bot():
 
         return (time.time() - last_used) >= (cooldown / m)
 
+    def findClick(self, image, confidence=0.85, normalised = False):
+        """Generic functuion to find a given image, then click it"""
+        
+        found = False
+        while not found:
+            time.sleep(0.2)
+            found = self.checkFor(image, confidence=confidence, return_cords=True, return_raw=True)
+        simulatedinput.click(found, normalised=normalised)
+
     def start_first_round(self):
         if self.fast_forward:
             simulatedinput.send_key("space", amount=2)
@@ -397,46 +405,44 @@ class Bot():
 
         self.game_start_time = time.time()
 
-    def check_for_collection_crates(self):
-        # Can this be done better?
-        if self.checkFor("diamond_case"):
-            log.debug("easter collection detected")
-
-            simulatedinput.click("EASTER_COLLECTION") #DUE TO EASTER EVENT:
-            time.sleep(1)
-            simulatedinput.click("LEFT_INSTA") # unlock insta
-            time.sleep(1)
-            simulatedinput.click("LEFT_INSTA") # collect insta
-            time.sleep(1)
-            simulatedinput.click("RIGHT_INSTA") # unlock r insta
-            time.sleep(1)
-            simulatedinput.click("RIGHT_INSTA") # collect r insta
-            time.sleep(1)
-            simulatedinput.click("F_LEFT_INSTA")
-            time.sleep(1)
-            simulatedinput.click("F_LEFT_INSTA")
-            time.sleep(1)
-            simulatedinput.click("MID_INSTA") # unlock insta
-            time.sleep(1)
-            simulatedinput.click("MID_INSTA") # collect insta
-            time.sleep(1)
-            simulatedinput.click("F_RIGHT_INSTA")
-            time.sleep(1)
-            simulatedinput.click("F_RIGHT_INSTA")
-            time.sleep(1)
-
-            time.sleep(1)
-            simulatedinput.click("EASTER_CONTINUE")
-
-            simulatedinput.send_key("esc")
-            time.sleep(1)
+    def check_for_collection_crates(self, monkeyTypes: list[str] | str = "ALL"):
+        
+        foundMenu = False
+        while not foundMenu:
+            
+            for monkey in monkeyTypes:
+                if monkey == "ALL":
+                    break
+                if self.checkFor(monkey):
+                    self.findClick(monkey)
+                    break
+                
+            if self.checkFor("event_collect"):
+                self.findClick("event_collect")
+                
+            continueButton = False
+            
+            while not continueButton:
+                for tier in ["common", "uncommon", "rare", "epic", "legendary"]:
+                    
+                    imageName = f"event_insta_{tier}"
+                    found = self.checkFor(imageName)
+                    if found:
+                        self.findClick(imageName, amount=2, timeout=1)
+                        break
+                    
+                continueButton = self.checkFor("event_continue")
+                    
+            self.findClick("event_continue")
             simulatedinput.send_key("esc")
             
-    # select hero if not selected
-    def hero_select(self):
-        hero_vaiants = [f"{self.settings['HERO']}_{i}" for i in range(1, 4)]
+            foundMenu = self.checkFor("home_menu")
 
-        if not self.checkFor(hero_vaiants):
+    def hero_select(self):
+        # select hero if not selected
+        hero_variants = [f"{self.settings['HERO']}_{i}" for i in range(1, 4)]
+
+        if not self.checkFor(hero_variants):
             log.debug(f"Selecting {self.settings['HERO']}")
 
             simulatedinput.click("HERO_SELECT")
@@ -515,7 +521,6 @@ class Bot():
         if self.settings["GAMEMODE"] in confirm_list or self.SANDBOX:
             simulatedinput.send_key("esc", timeout=1)
 
-    
     def wait_for_loading(self):
         still_loading = True
 
@@ -563,7 +568,6 @@ class Bot():
         round_area["left"] = default_round_area_scaled[0]
         round_area["top"] = default_round_area_scaled[1]
         return round_area
-    
 
     def getRound(self):
         # If round area is not located yet

@@ -212,7 +212,7 @@
             }
         }
     ],
-    "41": [
+    "38": [
         {
             "INSTRUCTION_TYPE": "PLACE_TOWER",
             "ARGUMENTS": {
@@ -244,7 +244,7 @@
             }
         }
     ],
-    "42": [
+    "39": [
         {
             "INSTRUCTION_TYPE": "PLACE_TOWER",
             "ARGUMENTS": {

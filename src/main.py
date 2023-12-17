@@ -61,7 +61,7 @@ Join the discord: https://discord.gg/qyKT6bzqZQ
     print("="*25)
 
     print("Waiting for Home screen. Please switch to the Bloons TD 6 window.")
-
+    bot.check_for_collection_crates(args['monkey'].split())
     # Wait for btd6 home screen
     waiting_for_home = False
 
@@ -107,10 +107,11 @@ Join the discord: https://discord.gg/qyKT6bzqZQ
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='A bot that plays the game bloons td 6')
 
-    parser.add_argument('-p', '--path', '--gameplan_path', type=str, help='Path to the gameplan directory', required=True)
+    parser.add_argument('-p', '--path', type=str, help='Path to the gameplan directory', required=True)
     parser.add_argument('-d', '--debug', action='store_true', help='Enable debug mode')
-    parser.add_argument('-r', '--restart', action='store_true', help='automatically restarts the game when finished, instead of going to home screen')
+    parser.add_argument('-r', '--restart', action='store_true', help='Automatically restarts the game when finished, instead of going to home screen')
     parser.add_argument('-s', '--sandbox', action='store_true', help='Try put gameplan in sandbox mode without waiting for specific rounds')
+    parser.add_argument('-m', '--monkey', type=str, default='ALL', help='Choose which insta-monkey to farm during collection events. "ALL" for random monkeys or "str1, str2, etc."')
     
     # Start the bot on a seperate thread
     bot_thread = Thread(target=main, args=(parser,), daemon=True)

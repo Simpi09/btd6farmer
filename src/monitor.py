@@ -6,7 +6,7 @@ Handle for monitor related functions, such as
 
 """
 from logger import logger as log
- 
+
 import sys
 import ctypes
 import tkinter
