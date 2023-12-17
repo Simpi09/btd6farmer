@@ -429,6 +429,8 @@ class Bot():
             simulatedinput.click("EASTER_CONTINUE")
 
             simulatedinput.send_key("esc")
+            time.sleep(1)
+            simulatedinput.send_key("esc")
             
     # select hero if not selected
     def hero_select(self):
