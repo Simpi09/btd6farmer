@@ -1,0 +1,196 @@
+{
+   "31":[
+	{
+		"INSTRUCTION_TYPE": "PLACE_TOWER",
+		"ARGUMENTS": {
+			"MONKEY": "VILLAGE",
+			"LOCATION": [
+				0.82265625,
+				0.5763888888888888
+			]
+		}
+	},
+	{
+		"INSTRUCTION_TYPE": "PLACE_TOWER",
+		"ARGUMENTS": {
+			"MONKEY": "VILLAGE",
+			"LOCATION": [
+				0.82265625,
+				0.6722222222222223
+			]
+		}
+	},	
+	{
+	 "INSTRUCTION_TYPE":"UPGRADE_TOWER",
+	 "ARGUMENTS":{
+		"LOCATION":[
+				0.82265625,
+				0.6722222222222223
+		],
+		"UPGRADE_PATH":[
+		   0,
+		   0,
+		   2
+		]
+	 }
+	},	
+	{
+	 "INSTRUCTION_TYPE":"UPGRADE_TOWER",
+	 "ARGUMENTS":{
+		"LOCATION": [
+			0.82265625,
+			0.5763888888888888
+		],
+		"UPGRADE_PATH":[
+		   0,
+		   0,
+		   2
+		]
+	 }
+	},	
+	{
+		"INSTRUCTION_TYPE": "PLACE_TOWER",
+		"ARGUMENTS": {
+			"MONKEY": "ACE",
+			"LOCATION": [
+				0.8140625,
+				0.487962962962963
+			]
+		}
+	},
+	{
+		"INSTRUCTION_TYPE": "PLACE_TOWER",
+		"ARGUMENTS": {
+			"MONKEY": "ACE",
+			"LOCATION": [
+				0.7497395833333333,
+				0.5842592592592593
+			]
+		}
+	},
+	{
+		"INSTRUCTION_TYPE": "PLACE_TOWER",
+		"ARGUMENTS": {
+			"MONKEY": "ACE",
+			"LOCATION": [
+				0.7515625,
+				0.6675925925925926
+			]
+		}
+	},
+	{
+		"INSTRUCTION_TYPE": "PLACE_TOWER",
+		"ARGUMENTS": {
+			"MONKEY": "ALCHEMIST",
+			"LOCATION": [
+				0.78359375,
+				0.7347222222222223
+			]
+		}
+	},	
+	{
+	 "INSTRUCTION_TYPE":"UPGRADE_TOWER",
+	 "ARGUMENTS":{
+		"LOCATION":[
+				0.78359375,
+				0.7347222222222223
+		],
+		"UPGRADE_PATH":[
+		   4,
+		   0,
+		   1
+		]
+	 }
+	},		
+	{
+	 "INSTRUCTION_TYPE":"UPGRADE_TOWER",
+	 "ARGUMENTS":{
+		"LOCATION":[
+				0.7515625,
+				0.6675925925925926
+		],
+		"UPGRADE_PATH":[
+		   2,
+		   0,
+		   4
+		]
+	 }
+	},		
+	{
+	 "INSTRUCTION_TYPE":"UPGRADE_TOWER",
+	 "ARGUMENTS":{
+		"LOCATION":[
+				0.7497395833333333,
+				0.5842592592592593
+		],
+		"UPGRADE_PATH":[
+		   2,
+		   0,
+		   4
+		]
+	 }
+	},		
+	{
+	 "INSTRUCTION_TYPE":"UPGRADE_TOWER",
+	 "ARGUMENTS":{
+		"LOCATION":[
+				0.8140625,
+				0.487962962962963
+		],
+		"UPGRADE_PATH":[
+		   2,
+		   0,
+		   4
+		]
+	 }
+	},		
+	{
+		"INSTRUCTION_TYPE": "REMOVE_TOWER",
+		"ARGUMENTS": {
+			"LOCATION": [
+				0.82265625,
+				0.5763888888888888
+			]
+		}
+	},
+	{
+		"INSTRUCTION_TYPE": "PLACE_TOWER",
+		"ARGUMENTS": {
+			"MONKEY": "VILLAGE",
+			"LOCATION": [
+				0.82265625,
+				0.5763888888888888
+			]
+		}
+	},	
+	{
+		"INSTRUCTION_TYPE": "REMOVE_TOWER",
+		"ARGUMENTS": {
+			"LOCATION": [
+				0.82265625,
+				0.6722222222222223
+			]
+		}
+	},
+	{
+	 "INSTRUCTION_TYPE":"UPGRADE_TOWER",
+	 "ARGUMENTS":{
+		"LOCATION": [
+			0.82265625,
+			0.5763888888888888
+		],
+		"UPGRADE_PATH":[
+		   0,
+		   2,
+		   0
+		]
+		}
+	},
+	{
+	 "INSTRUCTION_TYPE":"START",
+	 "ARGUMENTS":{
+		"FAST_FORWARD":true
+	 }
+	}
+   ]
+}

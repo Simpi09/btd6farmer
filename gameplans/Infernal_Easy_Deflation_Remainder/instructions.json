@@ -1,0 +1,196 @@
+{
+    "31": [
+        {
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "VILLAGE",
+                "LOCATION": [
+                    0.824609375,
+                    0.46875
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "UPGRADE_TOWER",
+            "ARGUMENTS": {
+                "LOCATION": [
+                    0.824609375,
+                    0.46875
+                ],
+                "UPGRADE_PATH": [
+                    2,
+                    0,
+                    2
+                ]
+            }
+        },
+        {
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "SNIPER",
+                "LOCATION": [
+                    0.797265625,
+                    0.5430555555555555
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "UPGRADE_TOWER",
+            "ARGUMENTS": {
+                "LOCATION": [
+                    0.797265625,
+                    0.5430555555555555
+                ],
+                "UPGRADE_PATH": [
+                    0,
+                    2,
+                    4
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "ALCHEMIST",
+                "LOCATION": [
+                    0.828515625,
+                    0.5965277777777778
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "UPGRADE_TOWER",
+            "ARGUMENTS": {
+                "LOCATION": [
+                    0.828515625,
+                    0.5965277777777778
+                ],
+                "UPGRADE_PATH": [
+                    4,
+                    0,
+                    0
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "TACK",
+                "LOCATION": [
+                    0.05208333333,
+                    0.51472222222
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "ICE",
+                "LOCATION": [
+                    0.05208333333,
+                    0.57472222222
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "BOMB",
+                "LOCATION": [
+                    0.0390625,
+                    0.44296296296
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "GLUE",
+                "LOCATION": [
+                    0.0399625,
+                    0.63887037037
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "HELI",
+                "LOCATION": [
+                    0.24479166666,
+                    0.21527777777
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "DARTLING",
+                "LOCATION": [
+                    0.43385416666,
+                    0.27092592592
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "DRUID",
+                "LOCATION": [
+                    0.43385416666,
+                    0.34092592592
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "BEAST",
+                "LOCATION": [
+                    0.43385416666,
+                    0.64824074074
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "SPIKE",
+                "LOCATION": [
+                    0.43385416666,
+                    0.71824074074
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "PLACE_TOWER",
+            "ARGUMENTS": {
+                "MONKEY": "MORTAR",
+                "LOCATION": [
+                    0.62890625,
+                    0.78009259259
+                ]
+            }
+        },
+		{
+            "INSTRUCTION_TYPE": "UPGRADE_TOWER",
+            "ARGUMENTS": {
+                "LOCATION": [
+                    0.0399625,
+                    0.63887037037
+                ],
+                "UPGRADE_PATH": [
+                    2,
+                    2,
+                    0
+                ]
+            }
+        },
+        {
+            "INSTRUCTION_TYPE": "START",
+            "ARGUMENTS": {
+                "FAST_FORWARD": true
+            }
+        }
+    ]  
+}
