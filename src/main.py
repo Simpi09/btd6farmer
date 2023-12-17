@@ -61,7 +61,6 @@ Join the discord: https://discord.gg/qyKT6bzqZQ
     print("="*25)
 
     print("Waiting for Home screen. Please switch to the Bloons TD 6 window.")
-    bot.check_for_collection_crates(args['monkey'].split())
     # Wait for btd6 home screen
     waiting_for_home = False
 
@@ -91,7 +90,7 @@ Join the discord: https://discord.gg/qyKT6bzqZQ
 
     # Make sure we haven't exited by using the stop key.
     while bot.running:
-        bot.check_for_collection_crates()
+        bot.check_for_collection_crates(args['monkey'].split())
 
         if not bot.RESTART:
             log.info("Selecting map")
