@@ -407,8 +407,7 @@ class Bot():
 
     def check_for_collection_crates(self, monkeyTypes: list[str] | str = "ALL"):
         
-        foundMenu = False
-        while not foundMenu:
+        while not self.checkFor("home_menu"):
             
             for monkey in monkeyTypes:
                 if monkey == "ALL":
@@ -435,8 +434,6 @@ class Bot():
                     
             self.findClick("event_continue")
             simulatedinput.send_key("esc")
-            
-            foundMenu = self.checkFor("home_menu")
 
     def hero_select(self):
         # select hero if not selected
