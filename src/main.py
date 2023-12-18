@@ -59,7 +59,7 @@ Join the discord: https://discord.gg/qyKT6bzqZQ
     print("Difficulty:", bot.settings["DIFFICULTY"].replace("_", " ").title())
     print("Gamemode:", bot.settings["GAMEMODE"].replace("_", " ").title())
     print("="*25)
-
+    
     print("Waiting for Home screen. Please switch to the Bloons TD 6 window.")
     # Wait for btd6 home screen
     waiting_for_home = False
@@ -90,15 +90,14 @@ Join the discord: https://discord.gg/qyKT6bzqZQ
 
     # Make sure we haven't exited by using the stop key.
     while bot.running:
-        bot.check_for_collection_crates(args['monkey'].split())
-
+        
         if not bot.RESTART:
+            bot.check_for_collection_crates(args['monkey'].split())
             log.info("Selecting map")
             
             # Choose map
             bot.select_map()   
         log.info("Game start")
-        
 
         # main game loop
         bot.loop()

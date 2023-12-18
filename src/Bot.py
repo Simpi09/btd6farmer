@@ -405,8 +405,9 @@ class Bot():
 
         self.game_start_time = time.time()
 
-    def check_for_collection_crates(self, monkeyTypes: list[str] | str = "ALL"):
+    def check_for_collection_crates(self, monkeyTypes: list[str] | str = ["ALL"]):
         
+        time.sleep(1)
         while not self.checkFor("home_menu"):
             
             for monkey in monkeyTypes:
@@ -423,11 +424,14 @@ class Bot():
             
             while not continueButton:
                 for tier in ["common", "uncommon", "rare", "epic", "legendary"]:
+                    if self.checkFor("home_menu"):
+                        # FailSafe
+                        return
                     
                     imageName = f"event_insta_{tier}"
-                    found = self.checkFor(imageName)
+                    found = self.checkFor(imageName, return_cords=True)
                     if found:
-                        self.findClick(imageName, amount=2, timeout=1)
+                        simulatedinput.click(found, amount=2, timeout=0.5, normalised=False)
                         break
                     
                 continueButton = self.checkFor("event_continue")
